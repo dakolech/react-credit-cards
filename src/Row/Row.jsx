@@ -3,13 +3,12 @@ import PropTypes from 'prop-types';
 import './styles.scss';
 import { formatCreditCardNumber, formatCVC, formatExpirationDate } from '../utils';
 
-class FormInput extends React.Component {
+class Row extends React.Component {
   static propTypes = {
     onChange: PropTypes.func,
     onFocus: PropTypes.func,
     placeholder: PropTypes.string,
     type: PropTypes.oneOf(['number', 'name', 'expiry', 'cvc']),
-    className: PropTypes.oneOf(['col-1', 'col-2', 'col-3', 'col-4', 'col-5', 'col-6', 'col-7', 'col-8', 'col-9', 'col-10', 'col-11', 'col-12']),
   };
 
   static defaultProps = {
@@ -17,7 +16,6 @@ class FormInput extends React.Component {
     onFocus: () => {},
     placeholder: '',
     type: '',
-    className: 'col-12',
   };
 
   handleInputChange = ({ target }) => {
@@ -102,7 +100,9 @@ class FormInput extends React.Component {
     );
   }
 
-  getInput(type) {
+  render() {
+    const { type } = this.props;
+
     switch (type) {
       case 'number':
         return this.renderNumberInput();
@@ -116,18 +116,6 @@ class FormInput extends React.Component {
         return this.renderNameInput();
     }
   }
-
-  render() {
-    const { type, className } = this.props;
-
-    return (
-      <div className="form-group">
-        <div className={className}>
-          {this.getInput(type)}
-        </div>
-      </div>
-    )
-  }
 }
 
-export default FormInput;
+export default Row;

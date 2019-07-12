@@ -7,6 +7,7 @@ module.exports = {
           'src/ReactCreditCard/ReactCreditCard.jsx',
           'src/CreditCardForm/CreditCardForm.jsx',
           'src/FormInput/FormInput.jsx',
+          'src/SubmitButton/SubmitButton.jsx',
           'src/CodeCreditCardForm/CodeCreditCardForm.jsx',
         ],
       },

@@ -25,17 +25,22 @@ export default class CodeCreditCardForm extends Component {
   };
 
   render() {
-    let { children } = this.props;
+    let { children, sumbitButton, onSubmit } = this.props;
     return (
       <div key="Payment">
         <div className="App-payment">
-          <ReactCreditCard {...this.state} />
-          {React.Children.map(children, (input, i) => React.cloneElement(input, {
-            onChange: this.handleOnChange,
-            onFocus: this.handleOnFocus,
-            key: i,
-            type: input.props.type,
-          }))}
+          <form onSubmit={this.handleSubmit}>
+            <div className="form-group">
+              <ReactCreditCard {...this.state} />
+            </div>
+            {React.Children.map(children, (input, i) => React.cloneElement(input, {
+              onChange: this.handleOnChange,
+              onFocus: this.handleOnFocus,
+              key: i,
+              type: input.props.type,
+            }))}
+            { React.cloneElement(sumbitButton, { onSubmit })}
+          </form>
         </div>
       </div>
     );
@@ -44,4 +49,6 @@ export default class CodeCreditCardForm extends Component {
 
 CodeCreditCardForm.propTypes = {
   children: PropTypes.node,
+  sumbitButton: PropTypes.element,
+  onSubmit: PropTypes.func,
 };
