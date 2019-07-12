@@ -30,9 +30,11 @@ export default class CodeCreditCardForm extends Component {
       <div key="Payment">
         <div className="App-payment">
           <ReactCreditCard {...this.state} />
-          {React.Children.map(children, (input) => React.cloneElement(input, {
+          {React.Children.map(children, (input, i) => React.cloneElement(input, {
             onChange: this.handleOnChange,
             onFocus: this.handleOnFocus,
+            key: i,
+            type: input.props.type,
           }))}
         </div>
       </div>
