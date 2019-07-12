@@ -28,8 +28,9 @@ class ReactCreditCard extends React.Component {
       PropTypes.string,
       PropTypes.number,
     ]).isRequired,
-    focused: PropTypes.oneOf(['name', 'number', 'expiry', 'cvc']),
+    focused: PropTypes.oneOf(['none', 'name', 'number', 'expiry', 'cvc']),
     issuer: PropTypes.oneOf([
+      'default',
       'visa',
       'mastercard',
       'discover',
@@ -58,6 +59,7 @@ class ReactCreditCard extends React.Component {
 
   static defaultProps = {
     acceptedCards: [],
+    callback: () => {},
     focused: '',
     issuer: '',
     locale: {
