@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Payment from 'payment';
 import './styles.scss';
 
-class ReactCreditCards extends React.Component {
+class ReactCreditCard extends React.Component {
   constructor(props) {
     super(props);
 
@@ -283,4 +283,4 @@ class ReactCreditCards extends React.Component {
   }
 }
 
-export default ReactCreditCards;
+export default ReactCreditCard;

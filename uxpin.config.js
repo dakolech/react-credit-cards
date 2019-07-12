@@ -2,13 +2,13 @@ module.exports = {
   components: {
     categories: [
       {
-        name: 'ReactCreditCards',
+        name: 'Components',
         include: [
-          'src/ReactCreditCards/ReactCreditCards.js',
-        ]
-      }
-    ]
+          'src/ReactCreditCard/ReactCreditCard.jsx',
+          'src/CreditCardForm/CreditCardForm.jsx',
+        ],
+      },
+    ],
   },
-  name: 'React Credit Cards'
+  name: 'React Credit Cards',
 };
-

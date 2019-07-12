@@ -1,4 +1,6 @@
 .tmp/
+.idea/
+.uxpin-merge/
 build/
 coverage/
 documentation/

@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import ReactCreditCards from '../src/ReactCreditCards/ReactCreditCards';
+import ReactCreditCard from '../src/ReactCreditCard/ReactCreditCard';
 
 const mockCallback = jest.fn();
 
@@ -15,7 +15,7 @@ const props = {
 };
 
 function setup(ownProps = props) {
-  return mount(<ReactCreditCards {...ownProps} />);
+  return mount(<ReactCreditCard {...ownProps} />);
 }
 
 describe('ReactCreditCards', () => {

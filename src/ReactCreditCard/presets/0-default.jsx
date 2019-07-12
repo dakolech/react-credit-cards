@@ -1,8 +1,8 @@
 import React from 'react';
-import ReactCreditCards from '../ReactCreditCards';
+import ReactCreditCard from '../ReactCreditCard';
 
 export default (
-  <ReactCreditCards
+  <ReactCreditCard
     uxpId="Card1"
     number=""
     name=""
