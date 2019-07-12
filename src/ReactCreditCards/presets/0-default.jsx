@@ -3,6 +3,7 @@ import ReactCreditCards from '../ReactCreditCards';
 
 export default (
   <ReactCreditCards
+    uxpId="Card1"
     number=""
     name=""
     expiry=""
