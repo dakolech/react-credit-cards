@@ -40,7 +40,14 @@
     "prop-types": "^15.6.2"
   },
   "dependencies": {
-    "payment": "^2.3.0"
+    "babel-loader": "^8.0.6",
+    "css-loader": "^3.0.0",
+    "payment": "^2.3.0",
+    "sass-loader": "^7.1.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.35.3",
+    "webpack-cli": "^3.3.5"
   },
   "devDependencies": {
     "@babel/core": "^7.0.0",
@@ -64,6 +71,7 @@
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@uxpin/merge-cli": "^2.2.2",
     "autoprefixer": "^9.4.3",
     "babel-core": "^7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",

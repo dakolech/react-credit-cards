@@ -1,7 +1,7 @@
 import React from 'react';
 import { mount } from 'enzyme';
 
-import ReactCreditCards from '../src';
+import ReactCreditCards from '../src/ReactCreditCards/ReactCreditCards';
 
 const mockCallback = jest.fn();
 
