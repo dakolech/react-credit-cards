@@ -58,6 +58,8 @@ class ReactCreditCard extends React.Component {
 
   static defaultProps = {
     acceptedCards: [],
+    focused: '',
+    issuer: '',
     locale: {
       valid: 'valid thru',
     },
