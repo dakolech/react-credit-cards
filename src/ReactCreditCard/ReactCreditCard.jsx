@@ -19,7 +19,8 @@ class ReactCreditCard extends React.Component {
 
   static propTypes = {
     acceptedCards: PropTypes.array,
-    callback: PropTypes.func,
+    onValid: PropTypes.func,
+    onInvalid: PropTypes.func,
     cvc: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
@@ -59,7 +60,8 @@ class ReactCreditCard extends React.Component {
 
   static defaultProps = {
     acceptedCards: [],
-    callback: () => {},
+    onValid: () => {},
+    onInvalid: () => {},
     focused: '',
     issuer: '',
     locale: {
@@ -197,7 +199,7 @@ class ReactCreditCard extends React.Component {
   }
 
   updateType(number) {
-    const { callback } = this.props;
+    const { onInvalid, onValid } = this.props;
     const type = Payment.fns.cardType(number) || 'unknown';
 
     let maxLength = 16;
@@ -222,9 +224,10 @@ class ReactCreditCard extends React.Component {
       type: typeState,
     });
 
-    /* istanbul ignore else */
-    if (typeof callback === 'function') {
-      callback(typeState, isValid);
+    if (isValid) {
+      onValid();
+    } else {
+      onInvalid();
     }
   }
 

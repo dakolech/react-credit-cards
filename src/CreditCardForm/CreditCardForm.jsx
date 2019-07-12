@@ -5,7 +5,7 @@ import {
   formatCVC,
   formatExpirationDate,
   formatFormData
-} from './utils';
+} from '../utils';
 import styles from './styles.scss';
 import bootstrap from '../../node_modules/bootstrap/scss/bootstrap.scss';
 
