@@ -7,7 +7,7 @@ import {
   formatFormData
 } from './utils';
 import styles from './styles.scss';
-
+import bootstrap from '../../node_modules/bootstrap/scss/bootstrap.scss';
 
 export default class CreditCardForm extends React.Component {
   state = {
@@ -66,8 +66,6 @@ export default class CreditCardForm extends React.Component {
     return (
       <div key="Payment">
         <div className="App-payment">
-          <h1>React Credit Cards</h1>
-          <h4>Beautiful credit cards for your payment forms</h4>
           <ReactCreditCard
             number={number}
             name={name}
