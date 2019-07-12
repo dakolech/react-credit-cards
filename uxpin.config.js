@@ -6,7 +6,7 @@ module.exports = {
         include: [
           'src/ReactCreditCard/ReactCreditCard.jsx',
           'src/CreditCardForm/CreditCardForm.jsx',
-          'src/NameInput/NameInput.jsx',
+          'src/FormInput/FormInput.jsx',
           'src/CodeCreditCardForm/CodeCreditCardForm.jsx',
         ],
       },
