@@ -33,12 +33,15 @@ export default class CodeCreditCardForm extends Component {
             <div className="form-group">
               <ReactCreditCard {...this.state} />
             </div>
-            {React.Children.map(children, (input, i) => React.cloneElement(input, {
-              onChange: this.handleOnChange,
-              onFocus: this.handleOnFocus,
-              key: i,
-              type: input.props.type,
-            }))}
+            {React.Children.map(children, (input) => (
+              <div className="form-group">
+                {React.cloneElement(input, {
+                  onChange: this.handleOnChange,
+                  onFocus: this.handleOnFocus,
+                })}
+              </div>
+              )
+            )}
             { React.cloneElement(sumbitButton, { onSubmit })}
           </form>
         </div>

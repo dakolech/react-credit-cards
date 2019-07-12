@@ -121,10 +121,8 @@ class FormInput extends React.Component {
     const { type, className } = this.props;
 
     return (
-      <div className="form-group">
-        <div className={className}>
-          {this.getInput(type)}
-        </div>
+      <div className={className}>
+        {this.getInput(type)}
       </div>
     )
   }

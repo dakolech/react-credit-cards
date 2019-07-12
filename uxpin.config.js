@@ -8,6 +8,7 @@ module.exports = {
           'src/CreditCardForm/CreditCardForm.jsx',
           'src/FormInput/FormInput.jsx',
           'src/SubmitButton/SubmitButton.jsx',
+          'src/Row/Row.jsx',
           'src/CodeCreditCardForm/CodeCreditCardForm.jsx',
         ],
       },
