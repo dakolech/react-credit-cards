@@ -23,11 +23,11 @@ class ReactCreditCard extends React.Component {
     cvc: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
-    ]).isRequired,
+    ]),
     expiry: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
-    ]).isRequired,
+    ]),
     focused: PropTypes.oneOf(['none', 'name', 'number', 'expiry', 'cvc']),
     issuer: PropTypes.oneOf([
       'default',
@@ -46,11 +46,11 @@ class ReactCreditCard extends React.Component {
     locale: PropTypes.shape({
       valid: PropTypes.string,
     }),
-    name: PropTypes.string.isRequired,
+    name: PropTypes.string,
     number: PropTypes.oneOfType([
       PropTypes.string,
       PropTypes.number,
-    ]).isRequired,
+    ]),
     placeholders: PropTypes.shape({
       name: PropTypes.string,
     }),
@@ -69,6 +69,10 @@ class ReactCreditCard extends React.Component {
       name: 'YOUR NAME HERE',
     },
     preview: false,
+    number: '',
+    name: '',
+    expiry: '',
+    cvc: '',
   };
 
   componentDidMount() {
